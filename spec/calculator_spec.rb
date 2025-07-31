@@ -23,5 +23,13 @@ RSpec.describe Calculator do
     it 'ignores extra spaces' do
       expect(calculator.add(" 1 , 2 ,3 ,4, 5 ")).to eq(15)
     end
+
+    it 'returns the sum of new line seperated numbers' do
+      expect(calculator.add("1\n2\n3\n4\n")).to eq(10)
+    end
+
+    it 'returns the sum of comma and newline numbers' do
+      expect(calculator.add("1\n2,3\n4")).to eq(10)
+    end
   end
 end
