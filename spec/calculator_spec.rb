@@ -31,5 +31,13 @@ RSpec.describe Calculator do
     it 'returns the sum of comma and newline numbers' do
       expect(calculator.add("1\n2,3\n4")).to eq(10)
     end
+
+    it 'raises an error for a single negative number' do
+      expect { calculator.add("1,-2,3") }.to raise_error(ArgumentError, "negative numbers not allowed: -2")
+    end
+
+    it 'raises an error listing all negative numbers' do
+      expect { calculator.add("-1,2,-3") }.to raise_error(ArgumentError, "negative numbers not allowed: -1, -3")
+    end
   end
 end
