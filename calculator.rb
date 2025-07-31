@@ -19,10 +19,10 @@ end
 
 ## Below examples to run and see the output
 
-calc = Calculator.new
-puts calc.add("")
-puts calc.add("1,2")
-puts calc.add("1 , 2 ")
-puts calc.add("1\n2,3")
-puts calc.add("1,2,-3")
-puts calc.add("-1,2,-3")
+# calc = Calculator.new
+# puts calc.add("")
+# puts calc.add("1,2")
+# puts calc.add("1 , 2 ")
+# puts calc.add("1\n2,3")
+# puts calc.add("1,2,-3")
+# puts calc.add("-1,2,-3")

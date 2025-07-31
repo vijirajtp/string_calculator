@@ -39,5 +39,13 @@ RSpec.describe Calculator do
     it 'raises an error listing all negative numbers' do
       expect { calculator.add("-1,2,-3") }.to raise_error(ArgumentError, "negative numbers not allowed: -1, -3")
     end
+
+    it 'supports custom delimiter ;' do
+      expect(calculator.add("//;\n1;2")).to eq(3)
+    end
+
+    it 'supports custom delimiter -' do
+      expect(calculator.add("//-\n4-5")).to eq(9)
+    end
   end
 end
